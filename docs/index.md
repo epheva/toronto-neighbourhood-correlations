@@ -140,7 +140,7 @@ Pearson's r ranges from -1 to +1:
 - values near -1 mean that neighbourhoods high on one variable tend to be low on the other, and
 - values near 0 indicate little linear relationship.
 
-## False-discovery-rate correction
+## False discovery rate correction
 
 For one selected variable such as voter turnout within each neighbourhood, its individual Pearson correlation is calculated with every other indicator. 
 
@@ -151,8 +151,6 @@ Why do this? When many statistical tests such as a correlation are performed at 
 Even with FDR correction, these are still descriptive neighbourhood-level associations. They are not causal effects.
 
 # Part 1: Voter turnout case study
-
-<img src="image.png" alt="Voting Turnout Correlations" width="100%">
 
 After the above procedure, the voter turnout correlations shows that voting participation is embedded in a much broader neighbourhood demographic and socioeconomic structure.
 
@@ -166,11 +164,11 @@ Citizenship eligibility, age, income, housing, mobility, length of residence, la
 
 Notably, each variable can also be linked to the dataset that was used to generate that variable. Each variable ends with _df[number] and that df number can be linked to the MasterList data dictionary (see last section). Unfortunately understanding what each variable means exactly is a bit of a manual process, but I tried to make the variable name as descriptive as possible.
 
+<img src="image.png" alt="Voting Turnout Correlations" width="100%">
+
+*Figure 1. Each bar shows the Pearson correlation between 2022 neighbourhood voter turnout and another neighbourhood indicator. Bars extending in the positive direction represent characteristics that tend to be higher in neighbourhoods with higher voter turnout, while bars extending in the negative direction represent characteristics that tend to be higher in lower turnout neighbourhoods. Longer bars indicate stronger relationships. Only correlations that remain statistically significant after false discovery rate correction (q < .05) are displayed.*
+
 # Part 2: Recorded chlamydia rate case study
-
-![Recorded chlamydia rate]()
-
-<img src="image-1.png" alt="Chlamydia Rate Correlations" width="100%">
 
 One perhaps interesting variable in the dataset is the recorded chlamydia rate, which can be used as an index of the rate of sexually transmitted disease within a neighbourhood.
 
@@ -178,9 +176,11 @@ Applying this correlation approach, the recorded chlamydia rate also sits within
 
 Higher recorded chlamydia rates tend to co-occur with several measures of high police activity, high crime rate, high social assistance and social housing, and acute or high mental-health service use, while chlamydia tend to be lower in neighbourhoods with higher married/common-law shares, more house-based residential structure and higher vehicle availability.
 
-# Part 3: Social assistance recipients case study
+<img src="image-1.png" alt="Chlamydia Rate Correlations" width="100%">
 
-<img src="image-2.png" alt="Social Assistance Recipients Correlations" width="100%">
+*Figure 2. Each bar shows the Pearson correlation between a neighbourhood's recorded chlamydia rate and another indicator. Positive correlations indicate characteristics that tend to be higher in neighbourhoods with higher recorded chlamydia rates, while negative correlations indicate characteristics that tend to be higher where recorded rates are lower. The length of each bar represents the strength of the relationship, and only correlations surviving false discovery rate correction (q < .05) are shown.*
+
+# Part 3: Social assistance recipients case study
 
 The social assistance measure also shows a strong neighbourhood socioeconomic gradient.
 
@@ -189,6 +189,10 @@ Higher social assistance use tends to appear alongside unemployment, Neighbourho
 It tends to move in the opposite direction from neighbourhood equity, income, home prices, advanced education and preventive care screening measures.
 
 The important result is not that one of these variables causes another. Rather, multiple dimensions of socioeconomic and health vulnerability frequently co-locate geographically.
+
+<img src="image-2.png" alt="Social Assistance Recipients Correlations" width="100%">
+
+*Each bar shows the Pearson correlation between neighbourhood social assistance use and another indicator. Positive bars identify characteristics that tend to be higher in neighbourhoods with greater social assistance use, while negative bars identify characteristics that tend to be higher where social-assistance use is lower. Longer bars represent stronger correlations, and only relationships surviving false discovery rate correction (q < .05) are displayed.*
 
 ## Summary of case studies
 
@@ -204,6 +208,10 @@ As a reminder, the correlation matrix approach described above calculates the co
 
 We can obtain a full matrix containing thousands of pairwise comparisons between all variables in our dataest. This allows us to create an exploratory map of the structure of the dataset rather than as thousands of separate hypothesis tests.
 
+<img src="image-5.png" alt="Social Assistance Recipients Correlations" width="100%">
+
+*Figure 4. This correlation similarity matrix heatmap shows the Pearson correlation between every pair of the 103 neighbourhood indicators. Each square represents one pair of variables: the colour indicates whether the relationship is positive or negative, while stronger colours indicate correlations farther from zero. The diagonal represents each variable correlated with itself (r = 1). Large blocks of similar colour indicate groups of characteristics that tend to show similar or opposing geographic patterns across Toronto. The interactive version can be hovered over to see the two variables, Pearson correlation (r), and raw p-value for each cell.*
+
 See this link for the full heatmap of this full correlation matrix: https://toronto-neighbourhood-correlations-c5but5exhsfgyapafdyctq.streamlit.app/ 
 
 The heatmap is interactive: hovering over a cell shows the two variables, their Pearson correlation and the raw p-value.
@@ -215,8 +223,6 @@ The heatmap is interactive: hovering over a cell shows the two variables, their 
 Next, what if we want to understand which variables then to group, or cluster, together. That is, can we find groups of variables that are highly related to each other and can be described by a common theme. 
 
 ## Hierarchical clustering of variables
-
-<img src="image-3.png" alt="Hierarchical clustering" width="100%">
 
 This analysis converts the correlation matrix described previously into a distance matrix: Correlation distance = 1 − Pearson r
 
@@ -233,6 +239,10 @@ A dendrogram then shows how individual indicators progressively merge into large
 The cutoff should not be interpreted as saying that every pair of variables inside one cluster has the same correlation. With average linkage, clusters are merged based on the average distance between their members.
 
 Notably, some groups contain only one variable. This simply means that, at the chosen 0.70 distance cutoff, that indicator was not similar enough to another variable or cluster to merge with it.
+
+<img src="image-3.png" alt="Hierarchical clustering" width="100%">
+
+*Figure 5. This dendrogram groups the 103 indicators according to how similarly they vary across Toronto neighbourhoods. Each label on the left represents one variable, and branches show how variables or groups of variables progressively merge. Variables that join at a lower correlation distance (x-axis) have more similar neighbourhood patterns. Variables that merge higher up are less similar. The horizontal cut at a correlation distance of 0.70 divides the tree into the 17 variable clusters discussed below. The coloured branches help show which variables belong to the same resulting group. The legend on the right describes cluster themes. *
 
 ## The 17 variable themes
 
@@ -350,8 +360,6 @@ The highest silhouette score occurs at k = 3, but this produces very broad group
 
 # Part 8. The eight neighbourhood profiles
 
-<img src="image-4.png" alt="K-means" width="100%">
-
 To understand each K-means cluster, I calculate the mean standardized value of every variable among the neighbourhoods belonging to that cluster.
 
 I then rank indicators by the absolute magnitude of that cluster mean and display the ten largest deviations.
@@ -359,6 +367,16 @@ I then rank indicators by the absolute magnitude of that cluster mean and displa
 For example, if a cluster is +1.5 SD on household income, the average neighbourhood in that cluster is 1.5 standard deviations above the citywide neighbourhood mean on that indicator. A negative value means that the cluster falls below the citywide neighbourhood average.
 
 The cluster labels below summarize those strongest deviations.
+
+<img src="image-4.png" alt="K-means" width="100%">
+
+*Figure 6. The map assigns each of Toronto's 140 historical neighbourhoods to one of eight K-means clusters based on its overall pattern across all 103 indicators. The map colours correspond to the cluster numbers shown in the legend: neighbourhoods with the same colour belong to the same cluster and therefore have relatively similar overall profiles.*
+
+*The accompanying cluster cards show the ten variables that most strongly distinguish each cluster from the Toronto neighbourhood average. Values are expressed in standard deviations (SD): 0 SD represents the average across neighbourhoods, +1 SD means the cluster average is one standard deviation above the neighbourhood average, and −1 SD means it is one standard deviation below it. Up arrows indicate variables that are higher than the Toronto neighbourhood average for that cluster, while down arrows indicate variables that are lower. Larger absolute SD values indicate characteristics that more strongly distinguish that cluster.*
+
+*The cluster colours and numbers are identifiers rather than rankings: Cluster 8 is not inherently better or worse than Cluster 1. Likewise, neighbourhoods within a cluster are similar across the complete 103 variable profile but are not identical.* 
+
+*The legend on the right displays themes observed within each cluster. Neighbourhoods that fall within that cluster are displayed under the titles.*
 
 ## Cluster 1: Immigrant-Dense Neighbourhoods with Lower Recorded Health Burden
 
