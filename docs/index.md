@@ -152,7 +152,7 @@ Even with FDR correction, these are still descriptive neighbourhood-level associ
 
 # Part 1: Voter turnout case study
 
-![Voter turnout](image.png)
+<img src="image.png" alt="Voting Turnout Correlations" width="100%">
 
 After the above procedure, the voter turnout correlations shows that voting participation is embedded in a much broader neighbourhood demographic and socioeconomic structure.
 
@@ -168,7 +168,9 @@ Notably, each variable can also be linked to the dataset that was used to genera
 
 # Part 2: Recorded chlamydia rate case study
 
-![Recorded chlamydia rate](image-1.png)
+![Recorded chlamydia rate]()
+
+<img src="image-1.png" alt="Chlamydia Rate Correlations" width="100%">
 
 One perhaps interesting variable in the dataset is the recorded chlamydia rate, which can be used as an index of the rate of sexually transmitted disease within a neighbourhood.
 
@@ -178,7 +180,7 @@ Higher recorded chlamydia rates tend to co-occur with several measures of high p
 
 # Part 3: Social assistance recipients case study
 
-![alt text](image-2.png)
+<img src="image-2.png" alt="Social Assistance Recipients Correlations" width="100%">
 
 The social assistance measure also shows a strong neighbourhood socioeconomic gradient.
 
@@ -214,7 +216,7 @@ Next, what if we want to understand which variables then to group, or cluster, t
 
 ## Hierarchical clustering of variables
 
-![Hierarchical clustering](image-3.png)
+<img src="image-3.png" alt="Hierarchical clustering" width="100%">
 
 This analysis converts the correlation matrix described previously into a distance matrix: Correlation distance = 1 − Pearson r
 
@@ -348,7 +350,7 @@ The highest silhouette score occurs at k = 3, but this produces very broad group
 
 # Part 8. The eight neighbourhood profiles
 
-![K-means](image-4.png)
+<img src="image-4.png" alt="K-means" width="100%">
 
 To understand each K-means cluster, I calculate the mean standardized value of every variable among the neighbourhoods belonging to that cluster.
 
