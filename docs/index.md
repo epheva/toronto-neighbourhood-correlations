@@ -192,7 +192,7 @@ The important result is not that one of these variables causes another. Rather, 
 
 <img src="image-2.png" alt="Social Assistance Recipients Correlations" width="100%">
 
-*Each bar shows the Pearson correlation between neighbourhood social assistance use and another indicator. Positive bars identify characteristics that tend to be higher in neighbourhoods with greater social assistance use, while negative bars identify characteristics that tend to be higher where social-assistance use is lower. Longer bars represent stronger correlations, and only relationships surviving false discovery rate correction (q < .05) are displayed.*
+*Figure 3. Each bar shows the Pearson correlation between neighbourhood social assistance use and another indicator. Positive bars identify characteristics that tend to be higher in neighbourhoods with greater social assistance use, while negative bars identify characteristics that tend to be higher where social-assistance use is lower. Longer bars represent stronger correlations, and only relationships surviving false discovery rate correction (q < .05) are displayed.*
 
 ## Summary of case studies
 
@@ -242,7 +242,7 @@ Notably, some groups contain only one variable. This simply means that, at the c
 
 <img src="image-3.png" alt="Hierarchical clustering" width="100%">
 
-*Figure 5. This dendrogram groups the 103 indicators according to how similarly they vary across Toronto neighbourhoods. Each label on the left represents one variable, and branches show how variables or groups of variables progressively merge. Variables that join at a lower correlation distance (x-axis) have more similar neighbourhood patterns. Variables that merge higher up are less similar. The horizontal cut at a correlation distance of 0.70 divides the tree into the 17 variable clusters discussed below. The coloured branches help show which variables belong to the same resulting group. The legend on the right describes cluster themes. *
+*Figure 5. This dendrogram groups the 103 indicators according to how similarly they vary across Toronto neighbourhoods. Each label on the left represents one variable, and branches show how variables or groups of variables progressively merge. Variables that join at a lower correlation distance (x-axis) have more similar neighbourhood patterns. Variables that merge higher up are less similar. The horizontal cut at a correlation distance of 0.70 divides the tree into the 17 variable clusters discussed below. The coloured branches help show which variables belong to the same resulting group. The legend on the right describes cluster themes.*
 
 ## The 17 variable themes
 
