@@ -198,7 +198,7 @@ The important result is not that one of these variables causes another. Rather, 
 
 These case studies reveal that voting behaviour, recorded chlamydia rates, and social assistance recipients correlates with many neighbourhood-level indicators. 
 
-One interpretation may be that social assistance recipients face many difficulties in Toronto. Not only do they have higher unemployment rates, but they also live in neighbourhoods with higher crime and are associated with greater health burden.
+One interpretation may be that social assistance recipients face many difficulties in Toronto. Neighbourhoods with higher rates of social assistance also tend to have higher unemployment and crime rates, as well as greater health burdens.
 
 # Part 4: What moves together across Toronto neighbourhoods?
 
