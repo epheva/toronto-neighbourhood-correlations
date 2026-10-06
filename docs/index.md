@@ -224,7 +224,7 @@ https://toronto-neighbourhood-correlations-c5but5exhsfgyapafdyctq.streamlit.app/
 
 Hovering over a cell shows the two variables, their Pearson correlation, and the raw p value.
 
-<img src="image-5.png" alt="Social Assistance Recipients Correlations" width="100%">
+<img src="image-5.png" alt="Correlation Matrix" width="100%">
 
 *Figure 4. This correlation similarity matrix heatmap shows the Pearson correlation between every pair of the 103 neighbourhood indicators. Each square represents one pair of variables: the colour indicates whether the relationship is positive or negative, while stronger colours indicate correlations farther from zero. The diagonal represents each variable correlated with itself (r = 1). Large blocks of similar colour indicate groups of characteristics that tend to show similar or opposing geographic patterns across Toronto. The interactive version can be hovered over to see the two variables, Pearson correlation (r), and raw p value for each cell.*
 
