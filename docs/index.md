@@ -1,6 +1,14 @@
 # Toronto Neighbourhoods Through 103 Public Indicators
 ## An exploratory analysis of how Toronto neighbourhood characteristics move together and what kinds of neighbourhood profiles emerge
 
+# Summary
+
+This project explores how demographic, socioeconomic, health, environmental, and urban characteristics are related across Toronto neighbourhoods. I integrated dozens of publicly available datasets into a unified dataset containing 103 indicators across Toronto's 140 historical neighbourhoods. Geographic preprocessing was used to reconcile different neighbourhood boundaries and aggregate spatial data into comparable measures. I then applied Pearson correlation analysis to identify associations between indicators, hierarchical clustering to identify groups of variables with similar geographic patterns, and K-means clustering to group neighbourhoods based on their overall characteristics. The analyses revealed 17 clusters of related indicators and eight descriptive neighbourhood profiles, highlighting interconnected patterns involving socioeconomic conditions, health, demographics, housing, transportation, infrastructure, and public safety. These findings illustrate how different dimensions of urban life frequently vary together rather than independently. The project provides an exploratory synthesis of Toronto's neighbourhood characteristics and a foundation for further investigation. Because the analysis uses aggregated data from different time periods, the findings should not be interpreted as causal relationships or as descriptions of individual residents.
+
+---
+
+# Introduction
+
 Toronto publishes an enormous amount of neighbourhood level data. Demographics, housing, health, public safety, infrastructure, transportation, civic indicators, and municipal assets are often available separately, but it is much harder to see how those pieces fit together.
 
 For this project, I combined dozens of public datasets into a single neighbourhood level table and used it to ask three broad questions:
@@ -281,7 +289,7 @@ Several of the larger groups are especially informative.
 
 ![Hierarchical clustering](image-3.png)
 
-*Figure 5. This dendrogram groups the 103 indicators according to how similarly they vary across Toronto neighbourhoods. Each label on the left represents one variable, and branches show how variables or groups of variables progressively merge. Variables that join at a lower correlation distance (x axis) have more similar neighbourhood patterns. Variables that merge higher up are less similar. The horizontal cut at a correlation distance of 0.70 divides the tree into the 17 variable clusters discussed below. The coloured branches help show which variables belong to the same resulting group. The legend on the right describes cluster themes.*
+*Figure 5. This dendrogram groups the 103 indicators according to how similarly they vary across Toronto neighbourhoods. Each label on the left represents one variable, and branches show how variables or groups of variables progressively merge. Variables that join at a lower correlation distance (x axis) have more similar neighbourhood patterns. Variables that merge higher up are less similar. The vertical cut at a correlation distance of 0.70 divides the tree into the 17 variable clusters discussed below. The coloured branches help show which variables belong to the same resulting group. The legend on the right describes cluster themes.*
 
 ### [C3] Family, chronic health, and socioeconomic vulnerability
 
@@ -455,7 +463,7 @@ Its strongest deviations include:
 - higher fertility
 - elevated firearm discharge activity
 
-These neighbourhoods show greater measured socioeconomic disadvantage, with unemployment, social assistance use, longer commutes, and lower advanced education rates tending to occur alongside higher measured health burdens and several serious public safety indicators.
+These neighbourhoods show greater measured socioeconomic disadvantage, with unemployment, social assistance use, longer commutes, and lower advanced education rates tending to occur alongside higher measured health burdens and serious public safety indicators.
 
 ## Cluster 5: Downtown Employment & Cultural Service Neighbourhoods
 
