@@ -47,7 +47,7 @@ For these reasons, I needed a method to assign each voting subdivision to a neig
 
 The voting subdivision polygons, historical neighbourhood polygons, and ward polygons are loaded with GeoPandas and projected to **EPSG:26917**.
 
-This matters because the next step involves calculating areas. Latitude/longitude coordinates are not suitable for interpreting polygon areas directly in square metres. the projected coordinate system allows the geographic overlap calculations to be performed in metre based units.
+This matters because the next step involves calculating areas. Latitude/longitude coordinates are not suitable for interpreting polygon areas directly in square metres. The projected coordinate system allows the geographic overlap calculations to be performed in metre based units.
 
 ## 2. Assign each voting subdivision to a neighbourhood
 
@@ -160,11 +160,11 @@ Even after FDR correction, these remain descriptive neighbourhood level associat
 
 ---
 
-# Part 1: Voter turnout case study
+# Part 1. Voter turnout case study
 
 The voter turnout correlations show that voting participation is embedded in a broader neighbourhood demographic and socioeconomic structure.
 
-Neighbourhoods with higher voter turnout tend to have higher non immigrant shares, higher Canadian citizenship rates, higher English/French mother tongue shares, and stronger socioeconomic or preventive care indicators. Lower turnout neighbourhoods tend to show the opposite pattern, including higher immigrant/newcomer concentration, unemployment, and long commute measures.
+Neighbourhoods with higher voter turnout tend to have higher non-immigrant shares, higher Canadian citizenship rates, higher English/French mother tongue shares, and stronger socioeconomic or preventive care indicators. Lower turnout neighbourhoods tend to show the opposite pattern, including higher immigrant/newcomer concentration, unemployment, and long commute measures.
 
 A simple reading would be that neighbourhoods with larger immigrant populations also tend to have lower voter turnout. However, this is an ecological analysis: the unit of observation is the neighbourhood, not the individual resident. A correlation between neighbourhood immigrant share and neighbourhood voter turnout does not tell us whether a particular immigrant resident voted, whether that person was eligible to vote, or why the neighbourhood level association exists.
 
@@ -178,13 +178,13 @@ Each variable can also be linked to the dataset used to generate it. Variable na
 
 ---
 
-# Part 2: Recorded chlamydia rate case study
+# Part 2. Recorded chlamydia rate case study
 
 Another variable in the dataset is the recorded chlamydia rate. This should be interpreted as a measure of recorded chlamydia diagnoses rather than as a complete measure of sexually transmitted infections or individual sexual behaviour.
 
 Applying the same correlation approach, recorded chlamydia rates also sit within a larger neighbourhood pattern.
 
-Higher recorded chlamydia rates tend to co occur with several measures of police activity, crime, social assistance, social housing, and acute or mental health service use. Recorded rates tend to be lower in neighbourhoods with higher married/common law shares, more house based residential structure, and higher vehicle availability.
+Higher recorded chlamydia rates tend to co-occur with several measures of police activity, crime, social assistance, social housing, and acute or mental health service use. Recorded rates tend to be lower in neighbourhoods with higher married/common law shares, more house based residential structure, and higher vehicle availability.
 
 These associations may reflect many overlapping factors, including age structure, access to testing and health services, socioeconomic conditions, population turnover, and other neighbourhood characteristics. They should not be interpreted as evidence that any one associated characteristic causes higher recorded chlamydia rates.
 
@@ -194,7 +194,7 @@ These associations may reflect many overlapping factors, including age structure
 
 ---
 
-# Part 3: Social assistance recipients case study
+# Part 3. Social assistance recipients case study
 
 The social assistance measure also shows a strong neighbourhood socioeconomic gradient.
 
@@ -202,7 +202,7 @@ Higher neighbourhood social assistance use tends to appear alongside unemploymen
 
 It tends to move in the opposite direction from neighbourhood equity, income, home prices, advanced education, and preventive care screening measures.
 
-The important result is not that one of these variables causes another. Rather, multiple dimensions of socioeconomic and health vulnerability frequently co locate geographically.
+The important result is not that one of these variables causes another. Rather, multiple dimensions of socioeconomic and health vulnerability frequently co-locate geographically.
 
 ![Social assistance recipients](image-2.png)
 
@@ -218,7 +218,7 @@ The social assistance pattern is a useful example of why the unit of analysis ma
 
 ---
 
-# Part 4: What moves together across Toronto neighbourhoods?
+# Part 4. What moves together across Toronto neighbourhoods?
 
 ## Complete neighbourhood level correlation heatmap
 
@@ -238,7 +238,7 @@ Hovering over a cell shows the two variables, their Pearson correlation, and the
 
 ---
 
-# Part 5: Grouping the variables themselves
+# Part 5. Grouping the variables themselves
 
 The full correlation matrix is difficult to interpret variable by variable. A natural next question is whether groups of indicators show similar geographic patterns across Toronto.
 
@@ -289,21 +289,21 @@ Several of the larger groups are especially informative.
 
 ![Hierarchical clustering](image-3.png)
 
-*Figure 5. This dendrogram groups the 103 indicators according to how similarly they vary across Toronto neighbourhoods. Each label on the left represents one variable, and branches show how variables or groups of variables progressively merge. Variables that join at a lower correlation distance (x axis) have more similar neighbourhood patterns. Variables that merge higher up are less similar. The vertical cut at a correlation distance of 0.70 divides the tree into the 17 variable clusters discussed below. The coloured branches help show which variables belong to the same resulting group. The legend on the right describes cluster themes.*
+*Figure 5. This dendrogram groups the 103 indicators according to how similarly they vary across Toronto neighbourhoods. Each label on the left represents one variable, and branches show how variables or groups of variables progressively merge. Variables that join at a lower correlation distance (x axis) have more similar neighbourhood patterns. Variables that merge father to the right are are less similar. The vertical cut at a correlation distance of 0.70 divides the tree into the 17 variable clusters discussed below. The coloured branches help show which variables belong to the same resulting group. The legend on the right describes cluster themes.*
 
 ### [C3] Family, chronic health, and socioeconomic vulnerability
 
 Cluster C3 contains indicators related to larger households and children alongside fertility, unemployment, social assistance, rent bank use, Neighbourhood Improvement Area designation, long commutes, several chronic health conditions, hospitalization measures, and some serious public safety outcomes.
 
-This does not mean that family structure itself represents vulnerability. Rather, these variables have sufficiently similar geographic patterns that they are grouped together statistically. Across the neighbourhoods in this dataset, larger family and child related measures tend to co occur geographically with greater economic hardship, higher measured chronic health burden, longer commutes, and more social service or public safety challenges.
+This does not mean that family structure itself represents vulnerability. Rather, these variables have sufficiently similar geographic patterns that they are grouped together statistically. Across the neighbourhoods in this dataset, larger family and child related measures tend to co-occur geographically with greater economic hardship, higher measured chronic health burden, longer commutes, and more social service or public safety challenges.
 
 ### [C7] Socioeconomic advantage, civic engagement, and preventive care
 
-C7 combines variables including income, home prices, advanced education, citizenship, non immigrant share, neighbourhood equity, voter turnout, cancer screening measures, and several related indicators.
+C7 combines variables including income, home prices, advanced education, citizenship, non-immigrant share, neighbourhood equity, voter turnout, cancer screening measures, and several related indicators.
 
-The cluster suggests that neighbourhoods with higher incomes, more expensive homes, more advanced education, higher equity scores, and higher voter turnout also tend to have higher cancer screening rates and larger shares of residents who are Canadian citizens and non immigrants.
+The cluster suggests that neighbourhoods with higher incomes, more expensive homes, more advanced education, higher equity scores, and higher voter turnout also tend to have higher cancer screening rates and larger shares of residents who are Canadian citizens and non-immigrants.
 
-Again, the cluster summarizes co occurring neighbourhood characteristics. it does not identify a causal pathway among them.
+Again, the cluster summarizes co-occurring neighbourhood characteristics. It does not identify a causal pathway among them.
 
 ### [C11] Dense urban, commercial, and public safety activity
 
@@ -327,11 +327,11 @@ The hierarchical clustering algorithm returns cluster membership numbers, not se
 
 I used ChatGPT to help summarize the variable lists into concise descriptive themes, then reviewed and revised those labels against the actual variables.
 
-Someone else could reasonably choose different wording for the same clusters. The statistical result is the cluster membership. the descriptive names used in this article are interpretations.
+Someone else could reasonably choose different wording for the same clusters. The statistical result is the cluster membership. The descriptive names used in this article are interpretations.
 
 ---
 
-# Part 6: Grouping the neighbourhoods
+# Part 6. Grouping the neighbourhoods
 
 This final analysis reverses the question. Instead of grouping variables according to how similarly they behave across Toronto, I group neighbourhoods according to how similar their overall 103-variable profiles are.
 
@@ -403,14 +403,14 @@ The cluster labels below summarize those strongest deviations.
 
 *The legend on the right displays themes observed within each cluster. Neighbourhoods that fall within that cluster are displayed under the titles.*
 
-## Cluster 1: Immigrant Dense Neighbourhoods with Lower Recorded Health Burden
+## Cluster 1. Immigrant Dense Neighbourhoods with Lower Recorded Health Burden
 
 The most distinctive features of Cluster 1 are demographic.
 
 Compared with Toronto neighbourhoods overall, this group has:
 
 - substantially lower English/French mother tongue share
-- substantially lower non immigrant share
+- substantially lower non-immigrant share
 - lower Canadian citizenship rate
 - a higher percentage of births to mothers born outside Canada
 
@@ -418,7 +418,7 @@ Several recorded health and health care indicators are also lower than average, 
 
 These neighbourhoods have larger immigrant and newcomer populations and also tend to show lower recorded levels of several health problems and health care use measures. Because these are recorded measures, the pattern may reflect true health differences, differences in population composition, health care access or use, diagnosis, or other factors.
 
-## Cluster 2: House Based & Youth/Health Burdened Neighbourhoods
+## Cluster 2. House Based & Youth/Health Burdened Neighbourhoods
 
 Cluster 2 is characterized by a relatively house oriented residential pattern together with elevated youth- and health related measures.
 
@@ -433,21 +433,21 @@ Its defining characteristics include:
 
 The youth indicators require a specific caveat: they show that youth related outcomes are elevated, not necessarily that these neighbourhoods contain a larger proportion of young people.
 
-## Cluster 3: Walkable, High Turnout & Lower Immigration Neighbourhoods
+## Cluster 3. Walkable, High Turnout & Lower Immigration Neighbourhoods
 
 Cluster 3 stands out for:
 
 - high Walk Score
 - high 2022 voter turnout
-- relatively high non immigrant share
+- relatively high non-immigrant share
 - relatively high English/French mother tongue share
 - fewer births to mothers born outside Canada
 - lower vehicle availability
 - lower prevalence of several cardiometabolic health measures
 
-This profile combines urban form, civic participation, and demographic composition. These neighbourhoods tend to be more walkable and less car oriented, with higher voter turnout, larger non immigrant and English/French mother tongue shares, and lower recorded levels of several cardiometabolic health conditions.
+This profile combines urban form, civic participation, and demographic composition. These neighbourhoods tend to be more walkable and less car oriented, with higher voter turnout, larger non-immigrant and English/French mother tongue shares, and lower recorded levels of several cardiometabolic health conditions.
 
-## Cluster 4: Lower Equity & Socioeconomically Vulnerable Neighbourhoods
+## Cluster 4. Lower Equity & Socioeconomically Vulnerable Neighbourhoods
 
 Cluster 4 shows one of the clearest socioeconomic vulnerability profiles.
 
@@ -465,7 +465,7 @@ Its strongest deviations include:
 
 These neighbourhoods show greater measured socioeconomic disadvantage, with unemployment, social assistance use, longer commutes, and lower advanced education rates tending to occur alongside higher measured health burdens and serious public safety indicators.
 
-## Cluster 5: Downtown Employment & Cultural Service Neighbourhoods
+## Cluster 5. Downtown Employment & Cultural Service Neighbourhoods
 
 Cluster 5 has an unusually high employment, cultural, and service profile.
 
@@ -487,7 +487,7 @@ However, this cluster illustrates an important issue in central Toronto. A downt
 
 Those measures are not necessarily errors: they describe activity intensity relative to the number of people who live inside the boundary. But they should not be interpreted as though only residents use those services or spaces.
 
-## Cluster 6: Affluent, High Equity & Preventive Care Advantaged Neighbourhoods
+## Cluster 6. Affluent, High Equity & Preventive Care Advantaged Neighbourhoods
 
 Cluster 6 is the clearest high socioeconomic advantage profile.
 
@@ -503,7 +503,7 @@ It is distinguished by:
 
 These neighbourhoods are more affluent on average, with higher incomes and home values tending to occur alongside lower unemployment and higher recorded use of preventive health services.
 
-## Cluster 7: Social Housing Concentrated & High Health Burden Neighbourhoods
+## Cluster 7. Social Housing Concentrated & High Health Burden Neighbourhoods
 
 Cluster 7 shows a strong combination of social housing concentration and acute health burden.
 
@@ -523,7 +523,7 @@ This is one of the clearest examples of multiple social and health indicators cl
 
 Again, these are neighbourhood level associations and should not be interpreted as evidence that social housing causes the health outcomes in the cluster.
 
-## Cluster 8: High Intensity Urban & Public Safety Activity Neighbourhoods
+## Cluster 8. High Intensity Urban & Public Safety Activity Neighbourhoods
 
 Cluster 8 is distinguished by unusually high levels of several urban activity and public safety indicators.
 
