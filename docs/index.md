@@ -289,7 +289,7 @@ Several of the larger groups are especially informative.
 
 ![Hierarchical clustering](image-3.png)
 
-*Figure 5. This dendrogram groups the 103 indicators according to how similarly they vary across Toronto neighbourhoods. Each label on the left represents one variable, and branches show how variables or groups of variables progressively merge. Variables that join at a lower correlation distance (x axis) have more similar neighbourhood patterns. Variables that merge father to the right are are less similar. The vertical cut at a correlation distance of 0.70 divides the tree into the 17 variable clusters discussed below. The coloured branches help show which variables belong to the same resulting group. The legend on the right describes cluster themes.*
+*Figure 5. This dendrogram groups the 103 indicators according to how similarly they vary across Toronto neighbourhoods. Each label on the left represents one variable, and branches show how variables or groups of variables progressively merge. Variables that join at a lower correlation distance (x axis) have more similar neighbourhood patterns. Variables that merge farther to the right are less similar. The vertical cut at a correlation distance of 0.70 divides the tree into the 17 variable clusters discussed above. The coloured branches help show which variables belong to the same resulting group. The legend on the right describes cluster themes.*
 
 ### [C3] Family, chronic health, and socioeconomic vulnerability
 
